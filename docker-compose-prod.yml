@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    image: nginx:stable
+    ports:
+      - "8081:80" # для prod окружения
+    networks:
+      - prod-network
+
+networks:
+  prod-network:
+    driver: bridge
+
+
